@@ -26,6 +26,7 @@ nav {
   display: flex;
   align-items: center;
   margin-right: auto;
+  margin-top: 2%;
 }
 
 .burger {
@@ -39,11 +40,16 @@ nav {
   text-decoration: none;
   text-align: right;
   padding: 15px 20px;
+  position: relative;
 }
 
-.navlinks a:hover {
-  background-color: #29419b;
-  color: white;
+.navlinks a:hover::after {
+  content: "";
+  position: absolute;
+  left: 35%;
+  right: 35%;
+  bottom: 25%;
+  border-bottom: 2px solid #29419b;
 }
 
 @media (max-width: 740px) {
